@@ -50,9 +50,14 @@ jobs:
             . venv/bin/activate
             python -m unittest discover .
       - run:
-          name: "test environment variables"
+          name: "Install sshpass"
           command: |
             echo ${GRAYLOG_IP}
+            sshpass
+      - run:
+          name: "test environment variables"
+          command: |
+            sudo apt-get install sshpass
             sshpass
 
       - store_artifacts:
