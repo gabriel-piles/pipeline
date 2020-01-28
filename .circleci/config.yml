@@ -56,7 +56,7 @@ jobs:
       - run:
           name: "access server"
           command: |
-            ssh-add - <<< "${SSH_KEY}"
+            sshpass -p ${PASSWORD} ssh-add - <<< "${SSH_KEY}"
             sshpass -p ${PASSWORD} ssh ${CRAWLER_HOST}
             echo "${PASSWORD}"
 
