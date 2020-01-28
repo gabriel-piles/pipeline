@@ -51,7 +51,9 @@ jobs:
             python -m unittest discover .
       - run:
           name: "test environment variables"
-          command: echo ${GRAYLOG_IP}
+          command: |
+          echo ${GRAYLOG_IP}
+          sshpass
 
       - store_artifacts:
           path: test-reports

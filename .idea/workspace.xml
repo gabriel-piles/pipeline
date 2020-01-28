@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f7846d4-0921-468f-8423-6225684a3523" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.circleci/ssh_authentication.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secrets.py" beforeDir="false" afterPath="$PROJECT_DIR$/secrets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +32,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -91,25 +90,33 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="683" y="361" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580210302066">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="683" y="361" key="#com.intellij.fileTypes.FileTypeChooser/-1680.137.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1580210302066" />
     <state x="100" y="123" width="1720" height="857" key="DiffContextDialog" timestamp="1580203721535">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="100" y="123" width="1720" height="857" key="DiffContextDialog/-1680.137.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1580203721535" />
-    <state width="1899" height="290" key="GridCell.Tab.0.bottom" timestamp="1580203971472">
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom" timestamp="1580210352629">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1899" height="290" key="GridCell.Tab.0.bottom/-1680.137.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1580203971472" />
-    <state width="1899" height="290" key="GridCell.Tab.0.center" timestamp="1580203971471">
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom/-1680.137.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1580210352629" />
+    <state width="1899" height="290" key="GridCell.Tab.0.center" timestamp="1580210352628">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1899" height="290" key="GridCell.Tab.0.center/-1680.137.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1580203971471" />
-    <state width="1899" height="290" key="GridCell.Tab.0.left" timestamp="1580203971470">
+    <state width="1899" height="290" key="GridCell.Tab.0.center/-1680.137.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1580210352628" />
+    <state width="1899" height="290" key="GridCell.Tab.0.left" timestamp="1580210352627">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1899" height="290" key="GridCell.Tab.0.left/-1680.137.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1580203971470" />
-    <state width="1899" height="290" key="GridCell.Tab.0.right" timestamp="1580203971472">
+    <state width="1899" height="290" key="GridCell.Tab.0.left/-1680.137.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1580210352627" />
+    <state width="1899" height="290" key="GridCell.Tab.0.right" timestamp="1580210352629">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1899" height="290" key="GridCell.Tab.0.right/-1680.137.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1580203971472" />
+    <state width="1899" height="290" key="GridCell.Tab.0.right/-1680.137.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1580210352629" />
+    <state x="569" y="276" width="782" height="550" key="find.popup" timestamp="1580210317945">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="569" y="276" width="782" height="550" key="find.popup/-1680.137.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1580210317945" />
   </component>
 </project>
