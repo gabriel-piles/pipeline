@@ -1,0 +1,7 @@
+*.pyc
+*.pyo
+.DS_Store
+.idea
+.vscode
+*.log
+nohup.out
