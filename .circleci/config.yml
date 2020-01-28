@@ -56,8 +56,8 @@ jobs:
       - run:
           name: "access server"
           command: |
-          ssh-add <(echo "$SSH_KEY")
-          sshpass -p ${SSH_PASSWORD} ssh -p 22  ${CRAWLER_HOST} 'df -h'
+            ssh-add <(echo "$SSH_KEY")
+            sshpass -p ${SSH_PASSWORD} ssh -p 22  ${CRAWLER_HOST} 'df -h'
 
       - store_artifacts:
           path: test-reports
