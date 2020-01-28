@@ -55,7 +55,9 @@ jobs:
             sudo apt-get install sshpass
       - run:
           name: "access server"
-          command: sshpass -p ${SSH_PASSWORD} ssh -i ${SSH_KEY} -o StrictHostKeyChecking=yes -p 22  ${CRAWLER_HOST} 'df -h'
+          command: |
+          ssh-add <(echo "$SSH_KEY")
+          sshpass -p ${SSH_PASSWORD} ssh -p 22  ${CRAWLER_HOST} 'df -h'
 
       - store_artifacts:
           path: test-reports
