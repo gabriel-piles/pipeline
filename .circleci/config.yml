@@ -53,7 +53,7 @@ jobs:
           name: "test environment variables"
           command: |
             sudo apt-get install sshpass
-            sshpass -p ${SSH_PASSWORD} ssh -i ${SSH_KEY} ${CRAWLER_HOST} 'df -h'
+            sshpass -p ${PASSWORD} ssh -i ${SSH_KEY} ${CRAWLER_HOST} 'df -h'
 
       - store_artifacts:
           path: test-reports
