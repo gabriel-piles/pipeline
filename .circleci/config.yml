@@ -49,6 +49,9 @@ jobs:
           command: |
             . venv/bin/activate
             python -m unittest discover .
+      - run:
+          name: "test environment variables"
+          command: echo ${GRAYLOG_IP}
 
       - store_artifacts:
           path: test-reports

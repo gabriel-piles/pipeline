@@ -19,4 +19,4 @@ graylog.info('Pipeline test server running')
 @app.route('/')
 def info():
     graylog.info('Pipeline test server called')
-    return 'Pipeline test server called'
+    return GRAYLOG_IP
