@@ -20,6 +20,10 @@ jobs:
     steps:
       - checkout
 
+      - add_ssh_keys:
+          fingerprints:
+            - "85:02:9f:8e:c8:ba:17:bd:01:79:7e:7b:ba:40:0a:7d"
+
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -50,9 +54,7 @@ jobs:
             . venv/bin/activate
             python -m unittest discover .
 
-      - add_ssh_keys:
-          fingerprints:
-            - "85:02:9f:8e:c8:ba:17:bd:01:79:7e:7b:ba:40:0a:7d"
       - run:
           name: "access server"
-          command: ssh ${CRAWLER_HOST} 'df -h'
+          command: ssh -o "StrictHostKeyChecking no" ${CRAWLER_HOST} 'df -h'
+
