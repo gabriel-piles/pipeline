@@ -1,0 +1,9 @@
+version: '3'
+services:
+  crawler:
+    build: .
+    container_name: 'pipeline'
+    ports:
+      - "5050:5000"
+    volumes:
+      - .:/code
