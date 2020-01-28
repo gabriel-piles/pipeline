@@ -86,6 +86,16 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="683" y="361" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580210302066">
       <screen x="0" y="23" width="1920" height="1057" />
