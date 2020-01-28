@@ -49,17 +49,12 @@ jobs:
           command: |
             . venv/bin/activate
             python -m unittest discover .
-      - run:
-          name: "Install sshpass"
-          command: |
-            sudo apt-get install sshpass
+
+  deploy-job:
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "85:02:9f:8e:c8:ba:17:bd:01:79:7e:7b:ba:40:0a:7d"
       - run:
           name: "access server"
-          command: |
-            sshpass -p ${PASSWORD} ssh-add - <<< "${SSH_KEY}"
-            sshpass -p ${PASSWORD} ssh ${CRAWLER_HOST}
-            echo "${PASSWORD}"
-
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
+          command: ssh {$CRAWLER_HOST} 'df -h'
