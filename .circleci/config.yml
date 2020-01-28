@@ -57,7 +57,7 @@ jobs:
           name: "access server"
           command: |
             ssh-add - <<< "$SSH_KEY"
-            sshpass -p ${SSH_PASSWORD} ssh ${CRAWLER_HOST}
+            sshpass -p ${PASSWORD} ssh ${CRAWLER_HOST}
             df -h
 
       - store_artifacts:
