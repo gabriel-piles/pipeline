@@ -50,10 +50,12 @@ jobs:
             . venv/bin/activate
             python -m unittest discover .
       - run:
-          name: "test environment variables"
+          name: "Install sshpass"
           command: |
             sudo apt-get install sshpass
-            sshpass -p ${PASSWORD} ssh -p 22 ${CRAWLER_HOST} 'df -h'
+      - run:
+          name: "access server"
+          command: sshpass -p ${PASSWORD} ssh -p 22 ${CRAWLER_HOST} 'df -h'
 
       - store_artifacts:
           path: test-reports
