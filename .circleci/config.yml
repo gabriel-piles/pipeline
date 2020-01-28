@@ -55,4 +55,4 @@ jobs:
             - "85:02:9f:8e:c8:ba:17:bd:01:79:7e:7b:ba:40:0a:7d"
       - run:
           name: "access server"
-          command: ssh {$CRAWLER_HOST} 'df -h'
+          command: ssh ${CRAWLER_HOST} 'df -h'
