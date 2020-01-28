@@ -58,7 +58,7 @@ jobs:
           command: |
             ssh-add - <<< "${SSH_KEY}"
             sshpass -p ${PASSWORD} ssh ${CRAWLER_HOST}
-            df -h
+            echo "${PASSWORD}"
 
       - store_artifacts:
           path: test-reports
