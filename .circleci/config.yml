@@ -53,17 +53,16 @@ jobs:
           command: |
             . venv/bin/activate
             python -m unittest discover .
+      - run:
+          name: "pwd"
+          command: pwd
 
       - run:
-          name: run tests
-          command: ls
+          name: "Copy code"
+          command: scp -o "StrictHostKeyChecking no" -r * ${CRAWLER_HOST}:/home/gabriel/pipeline/
 
-#      - run:
-#          name: "Copy code"
-#          command: scp -o "StrictHostKeyChecking no" . ${CRAWLER_HOST}:/home/gabriel/pipeline/
-#
-#      - run:
-#          name: "Start docker"
-#          command: echo ${PASSWORD} | ssh -tt -o "StrictHostKeyChecking no" ${CRAWLER_HOST} 'cd /home/gabriel/pipeline/ & sudo docker-compose up --build'
+      - run:
+          name: "Start docker"
+          command: echo ${PASSWORD} | ssh -tt -o "StrictHostKeyChecking no" ${CRAWLER_HOST} 'cd /home/gabriel/pipeline/ & sudo docker-compose up --build'
 
 
