@@ -70,6 +70,6 @@ jobs:
 
       - run:
           name: "Start docker service"
-          command: echo ${PASSWORD} | ssh -tt -o "StrictHostKeyChecking no" ${CRAWLER_HOST} 'export GRAYLOG_IP='my ip'; sudo docker-compose -f /home/gabriel/pipeline/docker-compose.yml up --build -d'
+          command: echo ${PASSWORD} | ssh -tt -o "StrictHostKeyChecking no" ${CRAWLER_HOST} 'export GRAYLOG_IP=${GRAYLOG_IP}; sudo -E docker-compose -f /home/gabriel/pipeline/docker-compose.yml up --build -d'
 
 
