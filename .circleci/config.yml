@@ -58,6 +58,12 @@ jobs:
           command: pwd
 
       - run:
+          name: "Delete unwanted files"
+          command: |
+            rm -rf venv
+            rm -rf __pycache__
+
+      - run:
           name: "Copy code"
           command: scp -o "StrictHostKeyChecking no" * ${CRAWLER_HOST}:/home/gabriel/pipeline/
 
