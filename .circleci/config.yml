@@ -69,6 +69,6 @@ jobs:
 
       - run:
           name: "Start docker"
-          command: echo ${PASSWORD} | ssh -tt -o "StrictHostKeyChecking no" ${CRAWLER_HOST} 'cd /home/gabriel/pipeline/ & sudo docker-compose up --build'
+          command: echo ${PASSWORD} | ssh -tt -o "StrictHostKeyChecking no" ${CRAWLER_HOST} 'sudo docker-compose -f /home/gabriel/pipeline/docker-compose.yml up --build'
 
 
