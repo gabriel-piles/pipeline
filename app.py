@@ -18,4 +18,4 @@ graylog.info('Pipeline test server running')
 @app.route('/')
 def info():
     graylog.info('Pipeline test server called')
-    return os.getenv('GRAYLOG_IP', 'no variable gotten')
+    return os.getenv('GRAYLOG_IP', 'variable not assigned')

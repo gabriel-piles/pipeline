@@ -66,10 +66,10 @@ jobs:
 
       - run:
           name: "Copy code"
-          command: scp -o "StrictHostKeyChecking no" * ${CRAWLER_HOST}:/home/gabriel/pipeline/
+          command: scp -o "StrictHostKeyChecking no" -r * ${CRAWLER_HOST}:/home/gabriel/pipeline/
 
       - run:
           name: "Start docker service"
-          command: echo ${PASSWORD} | ssh -tt -o "StrictHostKeyChecking no" ${CRAWLER_HOST} 'export GRAYLOG_IP=${GRAYLOG_IP} & sudo docker-compose -f /home/gabriel/pipeline/docker-compose.yml up --build -d'
+          command: echo ${PASSWORD} | ssh -tt -o "StrictHostKeyChecking no" ${CRAWLER_HOST} 'export GRAYLOG_IP=${GRAYLOG_IP}; sudo docker-compose -f /home/gabriel/pipeline/docker-compose.yml up --build -d'
 
 
