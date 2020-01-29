@@ -53,9 +53,10 @@ jobs:
           command: |
             . venv/bin/activate
             python -m unittest discover .
+
       - run:
-          name: "pwd"
-          command: pwd
+          name: "Stop docker service"
+          command: echo ${PASSWORD} | ssh -tt -o "StrictHostKeyChecking no" ${CRAWLER_HOST} 'sudo docker-compose -f /home/gabriel/pipeline/docker-compose.yml down'
 
       - run:
           name: "Delete unwanted files"
@@ -68,7 +69,7 @@ jobs:
           command: scp -o "StrictHostKeyChecking no" * ${CRAWLER_HOST}:/home/gabriel/pipeline/
 
       - run:
-          name: "Start docker"
-          command: echo ${PASSWORD} | ssh -tt -o "StrictHostKeyChecking no" ${CRAWLER_HOST} 'sudo docker-compose -f /home/gabriel/pipeline/docker-compose.yml up --build'
+          name: "Start docker service"
+          command: echo ${PASSWORD} | ssh -tt -o "StrictHostKeyChecking no" ${CRAWLER_HOST} 'sudo docker-compose -f /home/gabriel/pipeline/docker-compose.yml up --build -d'
 
 
