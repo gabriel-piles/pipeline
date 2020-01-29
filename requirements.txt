@@ -1,11 +1,2 @@
-dateparser
-cryptography
-twisted
-django-scheduler
-pymongo
-scrapy
-responses
 flask
-selenium
-Retry
 graypy

@@ -7,3 +7,5 @@ services:
       - "5050:5000"
     volumes:
       - .:/code
+    environment:
+      - GRAYLOG_IP=${GRAYLOG_IP}
